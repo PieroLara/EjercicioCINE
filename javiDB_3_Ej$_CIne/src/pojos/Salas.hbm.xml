@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-ene-2024 20:30:11 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Salas" table="salas" catalog="cine" optimistic-lock="version">
+        <id name="sid" type="java.lang.Integer">
+            <column name="sid" />
+            <generator class="identity" />
+        </id>
+        <property name="descr" type="string">
+            <column name="descr" length="10" not-null="true" />
+        </property>
+        <set name="disponibles" table="disponible" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sid" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Disponible" />
+        </set>
+        <set name="peliculaSalas" table="pelicula_sala" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sid" not-null="true" />
+            </key>
+            <one-to-many class="pojos.PeliculaSala" />
+        </set>
+        <set name="paseSalas" table="pase_sala" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sid" not-null="true" />
+            </key>
+            <one-to-many class="pojos.PaseSala" />
+        </set>
+    </class>
+</hibernate-mapping>
