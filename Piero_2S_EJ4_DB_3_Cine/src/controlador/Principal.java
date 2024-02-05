@@ -1,4 +1,4 @@
-package javidb_3_ej4_cine;
+package controlador;
 
 import Peliculas.Pase_Sala_DAO;
 import Peliculas.Pases_DAO;
@@ -12,7 +12,7 @@ import pojos.PaseSala;
 import sesion.Disponible_DAO;
 import sesion.InsertaDisponible;
 
-public class JaviDB_3_Ej4_CIne {
+public class Principal {
 
     public static void main(String[] args) {
 
