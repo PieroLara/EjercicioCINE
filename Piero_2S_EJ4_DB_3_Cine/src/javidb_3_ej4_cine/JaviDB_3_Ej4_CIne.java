@@ -12,7 +12,7 @@ import pojos.PaseSala;
 import sesion.Disponible_DAO;
 import sesion.InsertaDisponible;
 
-public class JaviDB_3_Ej4_CIne {
+public class Principal {
 
     public static void main(String[] args) {
 
